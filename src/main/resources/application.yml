@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: jme-cdct-segregated-consumer-service
+server:
+  servlet:
+    context-path: /${spring.application.name}
+  port: 8081
+jeap:
+  swagger:
+    status: OPEN

@@ -1,0 +1,15 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          jme-cdct-segregated-consumer-service:
+            client-id: "jme-cdct-segregated-consumer-service"
+            client-secret: "secret"
+            authorization-grant-type: "client_credentials"
+            provider: "default-provider"
+        provider:
+          default-provider:
+            issuer-uri: "http://localhost:8180/jme-cdct-segregated-auth-scs"
+task-api-url: http://localhost:8080/jme-cdct-segregated-provider-service/api/task
+user-api-url: http://localhost:8080/jme-cdct-segregated-provider-service/api/user
