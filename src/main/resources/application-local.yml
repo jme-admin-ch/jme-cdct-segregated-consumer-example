@@ -10,6 +10,8 @@ spring:
             provider: "default-provider"
         provider:
           default-provider:
-            issuer-uri: "http://localhost:8180/jme-cdct-segregated-auth-scs"
+            token-uri: "http://localhost:8180/jme-cdct-segregated-auth-scs/oauth2/token"
+            jwk-set-uri: "http://localhost:8180/jme-cdct-segregated-auth-scs/.well-known/jwks.json"
+
 task-api-url: http://localhost:8080/jme-cdct-segregated-provider-service/api/task
 user-api-url: http://localhost:8080/jme-cdct-segregated-provider-service/api/user
