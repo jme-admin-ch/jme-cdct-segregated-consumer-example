@@ -1,13 +1,13 @@
 name: jme-cdct-seg-consumer-example
 services:
   pact-broker-db:
-    image: postgres:17.9-alpine
+    image: postgres:18.3-alpine
     environment:
       POSTGRES_USER: pactbroker
       POSTGRES_PASSWORD: pactbroker
       POSTGRES_DB: pactbroker
     tmpfs:
-      - /var/lib/postgresql/data
+      - /var/lib/postgresql
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U pactbroker"]
       interval: 10s
