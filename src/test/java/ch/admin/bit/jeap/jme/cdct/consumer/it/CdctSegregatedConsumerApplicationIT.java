@@ -17,6 +17,7 @@ import static ch.admin.bit.jeap.jme.test.BootServiceIntegrationTestBase.TestProf
  */
 @SpringBootTest(classes = ConsumerApplication.class, webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 @ActiveProfiles(resolver = CdctSegregatedConsumerApplicationIT.TestProfileResolver.class, inheritProfiles = false)
+@SuppressWarnings("java:S2699") // test case has an assertion that sonar does not recognize
 public class CdctSegregatedConsumerApplicationIT extends BootServiceSpringIntegrationTestBase {
 
     private static final String HEALTH_URL = "http://localhost:8081/jme-cdct-segregated-consumer-service/actuator/health/readiness";

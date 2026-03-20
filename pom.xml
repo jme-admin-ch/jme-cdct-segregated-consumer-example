@@ -42,7 +42,7 @@
 
     <groupId>ch.admin.bit.jeap</groupId> <!-- GroupId is necessary for RHOS sca-check-->
     <artifactId>jme-cdct-segregated-consumer-example</artifactId>
-    <version>2.2.1-SNAPSHOT</version>
+    <version>2.2.2-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <dependencies>
@@ -127,6 +127,22 @@
                         <configuration>
                             <!-- Use the local Pact Broker -->
                             <pactBrokerUrl>http://localhost:9292</pactBrokerUrl>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <!-- This profile configures the project build to use the local Pact Broker instance on CI (see ./docker/docker-compose-ci.yml) -->
+        <profile>
+            <id>ci-pact-broker</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>au.com.dius.pact.provider</groupId>
+                        <artifactId>maven</artifactId>
+                        <configuration>
+                            <!-- Use the local Pact Broker from docker-compose on CI -->
+                            <pactBrokerUrl>http://pact-broker:9292</pactBrokerUrl>
                         </configuration>
                     </plugin>
                 </plugins>

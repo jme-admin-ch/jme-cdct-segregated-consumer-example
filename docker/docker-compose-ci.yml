@@ -4,6 +4,8 @@ services:
 
   pact-broker:
     ports: !reset [ ]
+    environment:
+      PACT_BROKER_BASE_URL: http://pact-broker:9292
 
 networks:
   default:
