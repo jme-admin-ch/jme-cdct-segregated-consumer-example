@@ -3,7 +3,6 @@ spring:
     compose:
       enabled: true
       file: docker/docker-compose.yml
-      host: 172.18.0.1
       lifecycle-management: start-and-stop
       skip:
         in-tests: false
