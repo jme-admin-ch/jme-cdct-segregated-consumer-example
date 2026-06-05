@@ -1,7 +1,7 @@
 name: jme-cdct-seg-consumer-example
 services:
   pact-broker-db:
-    image: postgres:18.3-alpine
+    image: postgres:18.4-alpine
     environment:
       POSTGRES_USER: pactbroker
       POSTGRES_PASSWORD: pactbroker
