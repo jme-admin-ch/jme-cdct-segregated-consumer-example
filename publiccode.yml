@@ -1,8 +1,8 @@
 publiccodeYmlVersion: 0.4.0
 name: jme-cdct-segregated-consumer-example
 applicationSuite: JME
-softwareVersion: 7.1.2
-releaseDate: 2026-07-07
+softwareVersion: 7.2.0
+releaseDate: 2026-07-08
 url: "https://github.com/jme-admin-ch/jme-cdct-segregated-consumer-example.git"
 landingURL: "https://github.com/jme-admin-ch/jme"
 platforms:
